@@ -1,33 +1,42 @@
 package com.nga.rockschoolscheduler.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "student")
 public class Student {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
 
+    @Column(name = "first_name")
     private String firstName;
 
+    @Column(name = "last_name")
     private String lastName;
 
+    @Column(name = "gender")
     private String gender;
 
+    @Column(name = "birth_date")
     private LocalDate birthDate;
 
+    @Column(name = "tel_number")
     private String telNumber;
 
+    @Column(name = "vk_account")
     private String vkAccount;
 
+    @Column(name = "inst_account")
     private String instAccount;
 
+    @Column(name = "subject_id")
     private int subjectId;
 
+    @Column(name = "instructor_id")
     private int instructorId;
 
     public Student() {
