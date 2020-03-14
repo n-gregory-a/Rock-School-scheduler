@@ -18,6 +18,12 @@ public class StudentTableForm extends VerticalLayout {
     public StudentTableForm(StudentRepository repository) {
         this.repository = repository;
 
+
+
+    }
+
+    public StudentTableForm() {
+
         this.grid = new Grid<>(Student.class);
 
         this.grid.setColumns(
@@ -27,7 +33,7 @@ public class StudentTableForm extends VerticalLayout {
         add(this.grid);
         setSizeFull();
 
-        grid.setItems((repository.findAll()));
+        updateList();
 
     }
 

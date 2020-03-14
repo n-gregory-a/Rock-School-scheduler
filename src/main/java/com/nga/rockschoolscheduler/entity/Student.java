@@ -22,7 +22,7 @@ public class Student {
     private String gender;
 
     @Column(name = "birth_date")
-    private LocalDate birthDate;
+    private String birthDate;
 
     @Column(name = "tel_number")
     private String telNumber;
@@ -42,7 +42,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(String firstName, String lastName, String gender, LocalDate birthDate, String telNumber, String vkAccount, String instAccount, int subjectId, int instructorId) {
+    public Student(String firstName, String lastName, String gender, String birthDate, String telNumber, String vkAccount, String instAccount, int subjectId, int instructorId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -86,11 +86,11 @@ public class Student {
         this.gender = gender;
     }
 
-    public LocalDate getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
