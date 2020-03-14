@@ -21,13 +21,13 @@ public class StudentTableForm extends VerticalLayout {
         this.grid = new Grid<>(Student.class);
 
         this.grid.setColumns(
-                "firstName", "lastName", "gender", "birthDate", "telNumber",
+                "id", "firstName", "lastName", "gender", "birthDate", "telNumber",
                 "vkAccount", "instAccount", "subjectId", "instructorId");
 
         add(this.grid);
         setSizeFull();
 
-        updateList();
+        grid.setItems((repository.findAll()));
 
     }
 
